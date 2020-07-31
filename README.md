@@ -1,4 +1,4 @@
 # Churn_Project
-## Author: Mauro Gioè. Email: maurogioe91@libero.it
+## Author: Mauro Gioè. Email: maurogioe91@gmail.com
 
 This repository contains the work related to a small project developed during July 2020 in order to get the hang of python. Inside the repository, you can find two different versions of the analysis, one done exploiting sklearn for the fitting/cross-validation of the model, and another one exploiting the spark framework. The tuning leads to different values for the parameters of the random forest (despite searching through the same grid of parameters and setting the same random seed). In any case, after searching for the threshold that maximizes the scoring metric, the performance of the models is roughly the same. The report refers only to the analysis done through sklearn. A dashboard with all the relevant graphs is available at the following link "https://churn-project.herokuapp.com".
