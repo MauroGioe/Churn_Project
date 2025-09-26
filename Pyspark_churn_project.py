@@ -81,13 +81,12 @@ stages += [assembler]
 pipeline = Pipeline(stages = stages)
 training.cache()
 train_preprocess = pipeline.fit(training)
-training.unpersist()
 training = train_preprocess.transform(training)
+training.unpersist()
 
 test.cache()
-test_preprocess = pipeline.fit(test)
-test.unpersist()
 test = train_preprocess.transform(test)
+test.unpersist()
 # endregion
 
 #Save pipeline
