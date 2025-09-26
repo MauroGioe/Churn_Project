@@ -84,11 +84,11 @@ custom_scorer = make_scorer(fbeta_score, beta=2, pos_label="Yes")
 # region Data preprocessing
 X_train_ori=X_train
 X_train=X_preprocessing.fit_transform(X_train)
-X_cols=X_preprocessing.transformers_[0][1].named_steps["onehot"].get_feature_names(categorical_cols).tolist()+numeric_cols
+X_cols=X_preprocessing.transformers_[0][1].named_steps["onehot"].get_feature_names_out(categorical_cols).tolist()+numeric_cols
 X_train=pd.DataFrame(X_train, columns=X_cols)
 
 X_test=X_preprocessing.transform(X_test)
-X_cols=X_preprocessing.transformers_[0][1].named_steps["onehot"].get_feature_names(categorical_cols).tolist()+numeric_cols
+X_cols=X_preprocessing.transformers_[0][1].named_steps["onehot"].get_feature_names_out(categorical_cols).tolist()+numeric_cols
 X_test=pd.DataFrame(X_test, columns=X_cols)
 # endregion
 
